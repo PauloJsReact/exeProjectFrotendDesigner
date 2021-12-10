@@ -120,3 +120,37 @@
 @media screen and (min-width:1600px) {
     
 }
+
+/* Classes utilitarias*/
+
+.jl-text-green{
+    color: #2ccb69;
+}
+
+.jl-text-dark{
+    color: #4d4c4c;
+}
+
+.jl-text-light{
+    color: #bcbcbc;
+}
+
+.jl-text-black{
+    color: #000;
+}
+
+.jl-bg-green{
+    background-color: #2ccb69;
+}
+
+.jl-bg-dark{
+    background-color: #4d4c4c;
+}
+
+.jl-bg-light{
+    background-color: #bcbcbc;
+}
+
+.jl-bg-black{
+    background-color: #000;
+}
