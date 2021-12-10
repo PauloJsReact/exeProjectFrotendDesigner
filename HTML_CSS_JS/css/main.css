@@ -60,9 +60,6 @@ p{
         transition: all 0.2s ease-out;
     }
 
-    .jl-btn-contact:hover{
-        background-position-y: -45px;
-    }
     .jl-contact-info{
         padding: 25px;
         width: 245px;
@@ -71,6 +68,7 @@ p{
         right: 66px;
         bottom: 115px;
         z-index: 200;
+        display: none;
     }
     .jl-contact-info-inner{
         display: table;
@@ -220,4 +218,16 @@ p{
 
 .jl-bg-black{
     background-color: #000;
+}
+
+/* CLASSES DE COMPORTAMENTO */
+
+
+.jl-is-open{
+    display: block;
+}
+
+
+.jl-change-ico{
+    background-position-y: -45px;
 }
