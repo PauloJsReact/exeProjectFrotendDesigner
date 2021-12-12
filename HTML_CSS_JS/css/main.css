@@ -11,13 +11,26 @@ p{
 }
 
 @media screen and (min-width:320px) {
-    .jl-page-wrapper{
+    .jl-page-wrapper, .jl-preloader{
         width: 100%;
         height: 100vh;
         display: block;
         background-color: #1c1c1c;
         border: 30px solid #000;
     }
+
+    .jl-preloader{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
     .jl-topbar{
         width: 100%;
         height: 110px;
@@ -58,6 +71,8 @@ p{
         border-radius: 50%;
         z-index: 200;
         transition: all 0.2s ease-out;
+        border: none;
+        cursor: pointer;
     }
 
     .jl-contact-info{
@@ -219,6 +234,47 @@ p{
 .jl-bg-black{
     background-color: #000;
 }
+
+.jl-mar-15{
+    margin: 15px;
+}
+
+.jl-mar-top-15{
+    margin-top: 15px;
+}
+
+.jl-mar-right-15{
+    margin-right: 15px;
+}
+
+.jl-mar-bottom-15{
+    margin-bottom: 15px;
+}
+
+.jl-mar-left-15{
+    margin-left: 15px;
+}
+
+.jl-padding-15{
+    padding: 15px;
+}
+
+.jl-padding-top-15{
+    padding-top: 15px;
+}
+
+.jl-padding-right-15{
+    padding-right: 15px;
+}
+
+.jl-padding-bottom-15{
+    padding-bottom: 15px;
+}
+
+.jl-padding-left-15{
+    padding-left: 15px;
+}
+
 
 /* CLASSES DE COMPORTAMENTO */
 
