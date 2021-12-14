@@ -19,7 +19,7 @@ p{
     .jl-page-wrapper, .jl-preloader{
         width: 100%;
         height: 100vh;
-        display: block;
+        display: table;
         background-color: #1c1c1c;
         border: 30px solid #000;
     }
@@ -138,6 +138,19 @@ p{
         right: 0;
         background: transparent url("../images/corner.svg") no-repeat;
     }
+
+    /*-----HOME------*/
+
+    .jl-display-text{
+        margin-top: 10%;
+    }
+
+    
+    #jl-home-presentation{
+        background-image: url("../images/joao-lemon-designer-home.png");
+        background-repeat: no-repeat;
+        background-position: 50% bottom;
+    }
 }
 
 @media screen and (min-width :576px ) {
@@ -188,6 +201,7 @@ p{
     .jl-menu a:hover:before{
         transform: scale(1,1);
     }
+
 }
 
 @media screen and (min-width:1200px) {
@@ -204,8 +218,11 @@ p{
 
 /* Classes utilitarias*/
 .jl-title{
-    font-family: "Abril Fateface" serif;
+    font-family:  'Abril Fatface', serif;
     font-weight: normal;
+}
+.jl-bg-title{
+    font-size: 120px;
 }
 
 .jl-text-green{
@@ -280,6 +297,13 @@ p{
     padding-left: 15px;
 }
 
+.jl-full-height{
+    height: 100vh;
+}
+
+.jl-first-section{
+    height: calc(100vh - 30px);
+}
 
 /* CLASSES DE COMPORTAMENTO */
 
