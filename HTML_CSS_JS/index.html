@@ -28,17 +28,36 @@
     <div class="jl-modal jl-bg-black">
         <div class="jl-modal-header">
             <h1 class="jl-title jl-text-green">
-                solicite um orçamento
+                Solicite um orçamento
             </h1>
             <button class="jl-close-modal">
                 X
             </button>
         </div>
         <div class="jl-modal.body">
-            <p class="jl-text-light">Por favor informe os dados abaixo e entrarei em contato o mais breve possivel.</p>
-            <form>
-                <input type="text" name="Nome" id="jl-nome">
-            </form>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="jl-text-light">Por favor informe os dados abaixo e entrarei em contato o mais breve
+                        possivel.</p>
+                </div>
+            </div>
+            <div class="row jl-mar-top-15">
+                <div class="col-sm-12">
+                    <form class="jl-form">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <label for="Nome" class="jl-text-light">Nome</label>
+                                <input type="text" name="Nome" id="jl-nome" class="jl-field" />
+                            </div>
+
+                            <div class="col-sm-12 col-md-6">
+                                <label for="Email" class="jl-text-light">Email</label>
+                                <input type="email" name="Email" id="jl-email" class="jl-field" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
