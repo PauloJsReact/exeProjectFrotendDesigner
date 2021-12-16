@@ -310,17 +310,54 @@ p{
 }
 /*BOTÕES*/
 .jl-btn{
-    padding: 0 35px;
     display: table;
-    background-color: #2ccb69;
-    height: 45px;
     text-align: center;
-    color: #1c1c1c;
     font-family: "Open Sans",sans-serif;
-    line-height: 45px;
     font-weight: 600;
-    border-radius: 23px;
     margin: 0 auto;
+    border: none;
+    transition: all 0.2s ease-out;
+}
+.jl-btn-small{
+    height: 28px;
+    padding: 0 20px;
+    border-radius: 14px;
+    font-size: 11px;
+}
+
+.jl-btn-medium{
+    height: 38px;
+    padding: 0 27px;
+    border-radius: 19px;
+    font-size: 14px;
+}
+
+.jl-btn-large{
+    height: 45px;
+    padding: 0 35px;
+    border-radius: 23px;
+    font-size: 16px;
+}
+.jl-btn-green{
+    background-color: #2ccb69;
+    color: #1c1c1c;
+}
+
+.jl-btn-green:hover{
+    background-color: #179949;
+    color: #fff;
+}
+
+
+.jl-btn-dark{
+    background-color: #2f2f2f;
+    color: #2ccb69;
+}
+
+
+.jl-btn-dark:hover{
+    background-color: #353434;
+    color: #fff;
 }
 
 /* Classes utilitarias*/
