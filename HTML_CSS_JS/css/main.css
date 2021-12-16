@@ -308,6 +308,20 @@ p{
 @media screen and (min-width:1600px) {
     
 }
+/*BOTÕES*/
+.jl-btn{
+    padding: 0 35px;
+    display: table;
+    background-color: #2ccb69;
+    height: 45px;
+    text-align: center;
+    color: #1c1c1c;
+    font-family: "Open Sans",sans-serif;
+    line-height: 45px;
+    font-weight: 600;
+    border-radius: 23px;
+    margin: 0 auto;
+}
 
 /* Classes utilitarias*/
 .jl-title{
