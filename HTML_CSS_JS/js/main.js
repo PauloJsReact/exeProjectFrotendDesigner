@@ -34,3 +34,14 @@ for (let i = 0; i < toggleModal.length; i++) {
     })
 
 }
+
+// Anmando elementos on Scroll com Waypoits
+
+var myScrollDown = document.querySelector(".jl-scroll-down")
+var waypoint = new Waypoint({
+    element: myScrollDown,
+    handler: function (direction) {
+        myScrollDown.classList.toggle("jl-fade-out")
+    },
+    offset: "80%"
+})
