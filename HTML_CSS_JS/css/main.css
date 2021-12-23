@@ -407,6 +407,28 @@ p,label{
     ion-icon {
         font-size: 32px;
       }
+    
+    .jl-slider-container{
+        width: 100%;
+        background-color: white;
+    }
+
+    .jl-slaider-list{
+        width: auto;
+        height: 700px;
+        display: block;
+        background-color: deeppink;
+        list-style: none;
+    }
+
+    .jl-slaider-item{
+        display: inline-block;
+        width: 500px;
+        height: 500px;
+
+    }
+
+
 }
 
 @media screen and (min-width :576px ) {
@@ -652,4 +674,23 @@ p,label{
 
 .jl-slaid-top-in{
     animation: slaidTopIn 0.6s forwards cubic-bezier( 0, 1.03, 1, 0.43 );
+}
+
+
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+
+.green{
+    background-color: green;
+}
+
+.purple{
+    background-color: purple;
+}
+.yellow{
+    background-color: yellow;
 }
