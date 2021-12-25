@@ -72,3 +72,34 @@ for (let p = 0; p < slaiderItem.length; p++) {
 slaiderList.style.width = slaiderListWidth + "px";
 
 
+// Fazendo a animaçao slaider onClick 
+
+var prevItem = document.querySelector(".jl-item-prev");
+var nextItem = document.querySelector(".jl-item-next");
+var slaiderPos = 0;
+
+nextItem.addEventListener("click", function () {
+    var lastItem = slaiderListWidth - containerWidth;
+
+    if (-1 * (slaiderPos) === lastItem) {
+        return;
+    }
+
+    slaiderPos -= containerWidth;
+    anime({
+        targets: slaiderList,
+        translateX: slaiderPos
+    });
+});
+
+prevItem.addEventListener("click", function () {
+    if (slaiderPos === 0) {
+        return;
+    }
+
+    slaiderPos += containerWidth
+    anime({
+        targets: slaiderList,
+        translateX: slaiderPos
+    })
+})
