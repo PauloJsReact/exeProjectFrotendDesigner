@@ -10,8 +10,9 @@ var slaiderListWidth = null;
 var prevItem = document.querySelector(".jl-item-prev");
 var nextItem = document.querySelector(".jl-item-next");
 var slaiderPos = 0;
-var correntSlaide = document.querySelector(".jl-corrent-slaide");
+var currentSlaide = document.querySelector(".jl-current-slaide");
 var totalSlaide = document.querySelector(".jl-total-slaide");
+var currentCounter = 1;
 
 
 //Capturando as larguras individuais 
@@ -74,14 +75,32 @@ var counterFormatter = function (n) {
     }
 }
 
+//CouterAdd 
+var currentAdd = function () {
+    if (currentCounter >= 0 && currentCounter < slaiderTotalItens) {
+        currentCounter++;
+        currentSlaide.innerHTML = counterFormatter(currentCounter);
+    }
+}
+
+//couter remove
+var currrentRemove = function () {
+    if (currentCounter > 1 && currentCounter <= slaiderTotalItens) {
+        currentCounter--;
+        currentSlaide.innerHTML = counterFormatter(currentCounter);
+    }
+}
+
 //Actions
 
 totalSlaide.innerHTML = counterFormatter(slaiderTotalItens);
 
 nextItem.addEventListener("click", function () {
+    currentAdd();
     nextSlaideAnim();
 });
 
 prevItem.addEventListener("click", function () {
     prevSlaindeAnim();
+    currrentRemove();
 })
