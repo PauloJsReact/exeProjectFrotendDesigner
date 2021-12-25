@@ -409,8 +409,9 @@ p,label{
       }
     
     .jl-slider-container{
-        width: 100%;
         background-color: white;
+        display: block;
+        overflow: hidden;
     }
 
     .jl-slaider-list{
@@ -422,8 +423,8 @@ p,label{
     }
 
     .jl-slaider-item{
-        display: inline-block;
-        width: 500px;
+        display: block;
+        float: left;
         height: 500px;
 
     }
