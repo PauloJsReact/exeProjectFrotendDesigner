@@ -13,7 +13,7 @@ var slaiderPos = 0;
 var currentSlaide = document.querySelector(".jl-current-slaide");
 var totalSlaide = document.querySelector(".jl-total-slaide");
 var currentCounter = 1;
-
+var navItem = document.querySelectorAll(".jl-item-navigator a");
 
 //Capturando as larguras individuais 
 
@@ -91,16 +91,48 @@ var currrentRemove = function () {
     }
 }
 
+//Set active Nav
+
+var setActiveNav = function () {
+    for (let nv = 0; nv < navItem.length; nv++) {
+        let myNavNum = parseInt(navItem[nv].getAttribute("data-nav"));
+        if (myNavNum === currentCounter) {
+            navItem[nv].classList.add("jl-item-active");
+            anime({
+                targets: ".jl-item-active",
+                width: 90
+            })
+        }
+    }
+}
+
+var changeActive = function () {
+    for (let rm = 0; rm < navItem.length; rm++) {
+        navItem[rm].classList.remove("jl-item-active");
+        anime({
+            targets: navItem[rm],
+            width: 20
+        })
+    }
+    setActiveNav();
+}
+
 //Actions
 
 totalSlaide.innerHTML = counterFormatter(slaiderTotalItens);
+anime({
+    targets: ".jl-item-active",
+    width: 90
+})
 
 nextItem.addEventListener("click", function () {
     currentAdd();
     nextSlaideAnim();
+    changeActive();
 });
 
 prevItem.addEventListener("click", function () {
     prevSlaindeAnim();
     currrentRemove();
+    changeActive();
 })

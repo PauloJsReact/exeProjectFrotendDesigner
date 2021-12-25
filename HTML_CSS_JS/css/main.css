@@ -365,7 +365,6 @@ p,label{
         background-color: #4d4c4c;
     }
     .jl-item-navigator a.jl-item-active{
-        width: 90px;
         background-color: #2ccb69;
     }
 
