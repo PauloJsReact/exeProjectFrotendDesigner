@@ -5,7 +5,14 @@
 var slaiderContainer = document.querySelector(".jl-slider-container");
 var slaiderList = document.querySelector(".jl-slaider-list");
 var slaiderItem = document.querySelectorAll(".jl-slaider-item");
+const slaiderTotalItens = slaiderItem.length;
 var slaiderListWidth = null;
+var prevItem = document.querySelector(".jl-item-prev");
+var nextItem = document.querySelector(".jl-item-next");
+var slaiderPos = 0;
+var correntSlaide = document.querySelector(".jl-corrent-slaide");
+var totalSlaide = document.querySelector(".jl-total-slaide");
+
 
 //Capturando as larguras individuais 
 
@@ -25,10 +32,6 @@ slaiderList.style.width = slaiderListWidth + "px";
 
 
 // Fazendo a animaçao slaider onClick 
-
-var prevItem = document.querySelector(".jl-item-prev");
-var nextItem = document.querySelector(".jl-item-next");
-var slaiderPos = 0;
 
 // HANDLERS
 
@@ -62,6 +65,18 @@ var prevSlaindeAnim = function () {
     })
 };
 
+//Couter fomater
+var counterFormatter = function (n) {
+    if (n < 10) {
+        return "0" + n;
+    } else {
+        return n;
+    }
+}
+
+//Actions
+
+totalSlaide.innerHTML = counterFormatter(slaiderTotalItens);
 
 nextItem.addEventListener("click", function () {
     nextSlaideAnim();
