@@ -14,6 +14,7 @@ var currentSlaide = document.querySelector(".jl-current-slaide");
 var totalSlaide = document.querySelector(".jl-total-slaide");
 var currentCounter = 1;
 var navItem = document.querySelectorAll(".jl-item-navigator a");
+var navCounter = document.querySelector(".jl-navigator-counter span");
 
 //Capturando as larguras individuais 
 
@@ -80,6 +81,7 @@ var currentAdd = function () {
     if (currentCounter >= 0 && currentCounter < slaiderTotalItens) {
         currentCounter++;
         currentSlaide.innerHTML = counterFormatter(currentCounter);
+        navCounter.innerHTML = counterFormatter(currentCounter);
     }
 }
 
@@ -88,6 +90,7 @@ var currrentRemove = function () {
     if (currentCounter > 1 && currentCounter <= slaiderTotalItens) {
         currentCounter--;
         currentSlaide.innerHTML = counterFormatter(currentCounter);
+        navCounter.innerHTML = counterFormatter(currentCounter);
     }
 }
 
