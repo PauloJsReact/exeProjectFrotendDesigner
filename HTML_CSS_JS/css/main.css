@@ -432,6 +432,20 @@ p,label{
         display: table;
         margin-top: 73px;
     }
+    .jl-portifolio-item-thumb{
+        width: calc(100%-30px);
+        background-color: #2c2c2c;
+        display: table;
+        padding: 75px 0;
+    }
+
+    .jl-portifolio-item-thumb img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        position: relative;
+        left: -75px;
+    }
 
 }
 
@@ -561,7 +575,7 @@ p,label{
     font-weight: normal;
 }
 .jl-title-large{
-    font-size: 64px;
+    font-size: 50px;
 }
 .jl-title-xlarge{
     font-size: 120px;
