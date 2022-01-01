@@ -63,6 +63,12 @@ p,label{
     }
 }
 
+@keyframes scaleRight {
+    to{
+        transform: scaleX(1);
+    }
+}
+
 @media screen and (min-width:320px) {
     .jl-page-wrapper, .jl-preloader{
         width: 100%;
@@ -71,6 +77,7 @@ p,label{
         background-color: #1c1c1c;
         border: 30px solid #000;
     }
+
 
     .jl-preloader{
         display: flex;
@@ -428,15 +435,27 @@ p,label{
     }
 
     .jl-portfolio-info{
-        width: 100%;
+        width: calc(100%-75px);
         display: table;
         margin-top: 73px;
     }
     .jl-portifolio-item-thumb{
         width: calc(100%-30px);
-        background-color: #2c2c2c;
         display: table;
         padding: 75px 0;
+        position: relative;
+    }
+    
+    .jl-portifolio-item-box{
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: #2c2c2c;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: right;
     }
 
     .jl-portifolio-item-thumb img{
@@ -737,6 +756,10 @@ p,label{
 
 .jl-slaid-top-in{
     animation: slaidTopIn 0.6s forwards cubic-bezier( 0, 1.03, 1, 0.43 );
+}
+
+.jl-scale-right{
+    animation: scaleRight 0.7s  0.2s forwards cubic-bezier(0,1.01,.32,1);
 }
 
 

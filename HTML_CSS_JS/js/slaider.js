@@ -49,7 +49,8 @@ var nextSlaideAnim = function () {
     slaiderPos -= containerWidth;
     anime({
         targets: slaiderList,
-        translateX: slaiderPos
+        translateX: slaiderPos,
+        easing: 'cubicBezier(0,1.01,.32,1)'
     });
 };
 
@@ -63,7 +64,8 @@ var prevSlaindeAnim = function () {
     slaiderPos += containerWidth
     anime({
         targets: slaiderList,
-        translateX: slaiderPos
+        translateX: slaiderPos,
+        easing: 'cubicBezier(0,1.01,.32,1)'
     })
 };
 
@@ -109,6 +111,19 @@ var setActiveNav = function () {
     }
 }
 
+//Set active Slaide
+
+var setActiveSlaide = function () {
+    for (let sld = 0; sld < slaiderItem.length; sld++) {
+        let mySlaidNum = parseInt(slaiderItem[sld].getAttribute("data-slaide"));
+        if (mySlaidNum === currentCounter) {
+            slaiderItem[sld].classList.add("jl-slaide-active");
+            slaiderItem[sld].querySelector(".jl-portifolio-item-box").classList.add("jl-scale-right");
+        }
+    }
+}
+
+
 var changeActive = function () {
     for (let rm = 0; rm < navItem.length; rm++) {
         navItem[rm].classList.remove("jl-item-active");
@@ -117,7 +132,13 @@ var changeActive = function () {
             width: 20
         })
     }
+
+    for (let rms = 0; rms < slaiderItem.length; rms++) {
+        slaiderItem[rms].classList.remove("jl-slaide-active");
+    }
+
     setActiveNav();
+    setActiveSlaide();
 }
 
 //Actions
