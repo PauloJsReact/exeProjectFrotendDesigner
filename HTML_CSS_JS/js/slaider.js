@@ -119,6 +119,8 @@ var setActiveSlaide = function () {
         if (mySlaidNum === currentCounter) {
             slaiderItem[sld].classList.add("jl-slaide-active");
             slaiderItem[sld].querySelector(".jl-portifolio-item-box").classList.add("jl-scale-right");
+            slaiderItem[sld].querySelector(".jl-portifolio-item-thumb img").classList.add("jl-scale-up");
+            slaiderItem[sld].querySelector(".jl-portfolio-info").classList.add("jl-fade-from-left");
         }
     }
 }
@@ -135,6 +137,8 @@ var changeActive = function () {
 
     for (let rms = 0; rms < slaiderItem.length; rms++) {
         slaiderItem[rms].classList.remove("jl-slaide-active");
+        slaiderItem[rms].querySelector(".jl-portifolio-item-thumb img").classList.remove("jl-scale-up");
+        slaiderItem[rms].querySelector(".jl-portfolio-info").classList.remove("jl-fade-from-left");
     }
 
     setActiveNav();

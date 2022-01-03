@@ -69,6 +69,19 @@ p,label{
     }
 }
 
+@keyframes scaleUp {
+    to{
+        transform:scale(1) ;
+    }
+}
+
+@keyframes fadefronLeft {
+    to{
+        left: 0;
+        opacity: 1;
+    }
+}
+
 @media screen and (min-width:320px) {
     .jl-page-wrapper, .jl-preloader{
         width: 100%;
@@ -438,6 +451,9 @@ p,label{
         width: calc(100%-75px);
         display: table;
         margin-top: 73px;
+        position: relative;
+        opacity: 0;
+        left: -75px;
     }
     .jl-portifolio-item-thumb{
         width: calc(100%-30px);
@@ -464,6 +480,8 @@ p,label{
         height: auto;
         position: relative;
         left: -75px;
+        transform: scale(0);
+
     }
 
 }
@@ -762,21 +780,11 @@ p,label{
     animation: scaleRight 0.7s  0.2s forwards cubic-bezier(0,1.01,.32,1);
 }
 
-
-.red{
-    background-color: red;
-}
-.blue{
-    background-color: blue;
+.jl-scale-up{
+    animation: scaleUp  0.5s  0.5s forwards cubic-bezier(0,1.01,.32,1);
 }
 
-.green{
-    background-color: green;
+.jl-fade-from-left{
+    animation: fadefronLeft 2s 0.7s forwards cubic-bezier(0,1.01,.32,1);
 }
 
-.purple{
-    background-color: purple;
-}
-.yellow{
-    background-color: yellow;
-}
