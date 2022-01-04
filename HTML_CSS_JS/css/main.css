@@ -458,7 +458,7 @@ p,label{
     .jl-portifolio-item-thumb{
         width: calc(100%-30px);
         display: table;
-        padding: 75px 0;
+        padding: 75px 0 19px 0;
         position: relative;
     }
     
@@ -474,6 +474,12 @@ p,label{
         transform-origin: right;
     }
 
+    .jl-portifolio-item-thumb > button{
+        margin-top: 17px;
+        float: right;
+        margin-right: 75px;
+    }
+
     .jl-portifolio-item-thumb img{
         width: 100%;
         max-width: 100%;
@@ -483,6 +489,7 @@ p,label{
         transform: scale(0);
 
     }
+
 
 }
 
@@ -558,7 +565,17 @@ p,label{
     border: none;
     transition: all 0.2s ease-out;
     text-transform: lowercase;
+    position: relative;
+
 }
+.jl-btn ion-icon{
+    font-size: 21px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2px;
+    margin-top: -3px;
+}
+
 .jl-btn-block{
     display: block;
     width: 100%;
@@ -566,6 +583,7 @@ p,label{
 
 .jl-btn-small{
     height: 28px;
+    line-height: 28px;
     padding: 0 20px;
     border-radius: 14px;
     font-size: 11px;
@@ -573,6 +591,7 @@ p,label{
 
 .jl-btn-medium{
     height: 38px;
+    line-height: 38px;
     padding: 0 27px;
     border-radius: 19px;
     font-size: 14px;
@@ -580,6 +599,7 @@ p,label{
 
 .jl-btn-large{
     height: 45px;
+    line-height: 45px;
     padding: 0 35px;
     border-radius: 23px;
     font-size: 16px;
@@ -596,7 +616,7 @@ p,label{
 
 
 .jl-btn-dark{
-    background-color: #2f2f2f;
+    background-color: #1f1e1e;
     color: #2ccb69;
 }
 
