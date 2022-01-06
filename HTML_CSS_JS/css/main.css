@@ -439,7 +439,7 @@ p,label{
         list-style: none;
     }
 
-    .jl-slaider-item{
+    .jl-slaider-list .jl-portifolio-item{
         display: block;
         float: left;
         height: 500px;
@@ -447,7 +447,11 @@ p,label{
 
     }
 
-    .jl-portfolio-info{
+    .jl-portifolio-list .jl-portifolio-item{
+        margin-bottom: 100px;
+    }
+
+    .jl-slaider-list .jl-portfolio-info{
         width: calc(100%-75px);
         display: table;
         margin-top: 73px;
@@ -455,14 +459,26 @@ p,label{
         opacity: 0;
         left: -75px;
     }
-    .jl-portifolio-item-thumb{
+
+    .jl-portifolio-list{
+        list-style: none;
+    }
+
+    .jl-portifolio-list .jl-portfolio-info{
+        width: calc(100%-105px);
+    }
+
+    .jl-slaider-list .jl-portifolio-item-thumb, .jl-portifolio-list .jl-portifolio-item-thumb{
         width: calc(100%-30px);
         display: table;
         padding: 75px 0 19px 0;
         position: relative;
     }
+    .jl-portifolio-list .jl-portifolio-item-thumb{
+        margin-left: 75px;
+    }
     
-    .jl-portifolio-item-box{
+    .jl-slaider-list .jl-portifolio-item-box, .jl-portifolio-list .jl-portifolio-item-box{
         width: 100%;
         height: 100%;
         display: block;
@@ -473,14 +489,17 @@ p,label{
         transform: scaleX(0);
         transform-origin: right;
     }
-
-    .jl-portifolio-item-thumb > button{
-        margin-top: 17px;
-        float: right;
-        margin-right: 75px;
+    .jl-portifolio-list .jl-portifolio-item-box{
+        transform: scaleX(1);
     }
 
-    .jl-portifolio-item-thumb img{
+    .jl-slaider-list .jl-portifolio-item-thumb > button,.jl-portifolio-list .jl-portifolio-item-thumb > button{
+        margin-top: 17px;
+        margin-right: 75px;
+        float: right;
+    }
+    
+    .jl-slaider-list .jl-portifolio-item-thumb img,.jl-portifolio-list .jl-portifolio-item-thumb img{
         width: 100%;
         max-width: 100%;
         height: auto;
@@ -490,13 +509,28 @@ p,label{
 
     }
 
+    .jl-portifolio-list .jl-portifolio-item-thumb img{
+        transform: scale(1);
+        left:-75px;
+    }
+
+
 
 
     /*-------- PORTIFOLIO ----------*/
 
     .jl-section-offset-top{
         margin-top: 130px;
-        
+
+    }
+
+    .jl-portifolio-list .jl-portifolio-item:nth-child(odd) .jl-portfolio-info{
+        text-align: right;
+        margin-top: 70px;
+    }
+
+    .jl-portifolio-list .jl-portifolio-item:nth-child(odd) .jl-portfolio-info button{
+        float: right;
     }
 
 }
