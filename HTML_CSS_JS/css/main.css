@@ -533,6 +533,25 @@ p,label{
         float: right;
     }
 
+    .jl-portifolio-list .jl-portifolio-item:nth-child(even) > .row{
+        flex-direction: row-reverse;
+    }
+
+    
+    .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portfolio-info{
+        margin-left: 105px;
+    }
+
+    .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portifolio-item-thumb button{
+        float: left;
+        margin-left:75px;
+
+    }
+    .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portifolio-item-thumb img{
+        left: 75px;
+    }
+
+
 }
 
 @media screen and (min-width :576px ) {
