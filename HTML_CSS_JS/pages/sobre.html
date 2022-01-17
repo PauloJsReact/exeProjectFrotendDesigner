@@ -11,13 +11,63 @@
         href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-grid.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <title>Jom Lemon UX/UI Designer</title>
+    <title>Jom Lemon - UX/UI Designer - Sobre </title>
 </head>
 
 <body>
+    <div class="jl-preloader">
+        <div class="jl-preloader-inner">
+            <img src="../images/lemon-loader.svg" alt="lemon-loader">
+            <p class="jl-text-light jl-mar-top-15">Aguarde um pouquinho ... Estou preparando uma limonada</p>
+        </div>
+    </div>
 
-    <h1>Sobre</h1>
+    <div class="jl-overlay jl-toggle-modal"></div>
+
+    <header class="jl-topbar">
+        <div class="jl-logo">
+            <img src="../images/logo.svg" alt="logo João Lemon UX/UI designer ">
+        </div>
+        <nav class="jl-menu">
+            <a href="../index.html">Home</a>
+            <a href="#">Portifolio</a>
+            <a href="#">Sobre</a>
+        </nav>
+    </header>
+    <div class="jl-contact-info jl-bg-black jl-text-light">
+        <div class="jl-contact-info-inner">
+            <h2 class="jl-text-green jl-title">Contato</h2>
+            <p>hello@jonlemon.com</p>
+            <p>+55 (00) 9 999-888</p>
+            <div class="jl-social-links">
+                <a href="#" class="jl-social">
+                    <img src="../images/icon-instagram.svg" alt="instagram">
+                </a>
+                <a href="#" class="jl-social">
+                    <img src="../images/icon-twitter.svg" alt="twitter">
+                </a>
+                <a href="#" class="jl-social">
+                    <img src="../images/icon-dribbble.svg" alt="dribbble">
+                </a>
+            </div>
+        </div>
+        <div class="jl-coner">
+
+        </div>
+    </div>
+    <button class="jl-btn-contact"></button>
+    <div class="jl-page-wrapper">
+        <section class="jl-section-offset-top"></section>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
