@@ -559,6 +559,22 @@ p,label{
         left: 75px;
     }
 
+    /* Sobre */
+
+    #jl-avatar-sobre img{
+        position: relative;
+        left: -15px;
+    }
+    .jl-box-img{
+        width: 100%;
+        display: table;
+    }
+    .jl-img-responsive{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
 
 }
 
@@ -700,6 +716,13 @@ p,label{
     font-family:  'Abril Fatface', serif;
     font-weight: normal;
 }
+
+.jl-subtitle{
+    font-family: "Open Sans",sans-serif;
+    font-weight: 800;
+}
+
+
 .jl-title-large{
     font-size: 50px;
 }
@@ -845,6 +868,32 @@ p,label{
     border-top-right-radius: 0;
 }
 
+.jl-page-list{
+    list-style: none;
+    font-family: "Open Sans",sans-serif;
+}
+
+.jl-page-list > li{
+    font-weight: 14px;
+    line-height: 21px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 20px;
+
+}
+.jl-page-list > li:before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    display: block;
+    background-color: #2ccb69;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    border-radius: 50%;
+
+}
+
 /* CLASSES DE COMPORTAMENTO */
 
 
@@ -877,6 +926,28 @@ p,label{
     animation: fadefronLeft 2s 0.7s forwards cubic-bezier(0,1.01,.32,1);
 }
 
+
+
 .jl-bg-green{
     background-color: #2ccb69;
+}
+
+
+
+
+
+.red{
+background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.purple{
+    background-color: purple;
 }
