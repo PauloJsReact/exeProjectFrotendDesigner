@@ -600,6 +600,16 @@ p,label{
         display: block;
     }
 
+    /*---------Detalhes----------*/
+
+    .jl-hero{
+        height: 500px;
+        background-image: url("../pages/portifolio/img/hero.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: block;
+    }
 }
 
 @media screen and (min-width :576px ) {
