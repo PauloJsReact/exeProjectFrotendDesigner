@@ -612,7 +612,6 @@ p,label{
     }
 
     .jl-hero h1{
-        font-size: 48px;
         padding-bottom: 50px;
     }
 
@@ -642,6 +641,20 @@ p,label{
         height: 100%;
         display: table;
         border-right: 1px solid #2ccb69;
+    }
+
+    .jl-post p{
+        margin-bottom: 30px;
+    }
+
+    .jl-post-15px p{
+        margin-bottom: 15px;
+    }
+
+    .jl-post-section{
+        width: 100%;
+        display: table;
+        padding: 45px 0;
     }
 }
 
@@ -789,6 +802,13 @@ p,label{
     font-weight: 800;
 }
 
+.jl-title-medium{
+    font-size: 48px;
+}
+
+.jl-text-aling-center{
+    text-align: center;
+}
 
 .jl-title-large{
     font-size: 50px;
