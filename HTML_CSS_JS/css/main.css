@@ -669,6 +669,45 @@ p,label{
         position: relative;
         top: -270px;
     }
+    .jl-gallery-inner{
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+    }
+
+    .jl-gallery-frame-container{
+        width: 400px;
+        display: none;
+        position: fixed;
+        top: 30px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 1500;
+    }
+
+
+    img.jl-gallery-frame{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1300;
+    }
+
+    .jl-gallery-frame-image{
+        width: 87%;
+        height: 87%;
+        margin: 0 auto;
+        display: block;
+        border-radius: 30px;
+        z-index: 1200;
+        position: relative;
+        top: 20px;
+    }
 }
 
 @media screen and (min-width :576px ) {
