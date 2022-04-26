@@ -708,6 +708,27 @@ p,label{
         position: relative;
         top: 20px;
     }
+
+    .jl-close-gallery{
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        display: block;
+        background-color: #000;
+        top: -30px;
+        right: -30px;
+        border: none;
+        border-radius: 50%;
+    }
+    .jl-close-gallery ion-icon{
+        color:#2ccb69;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 45px;
+        cursor: pointer;
+    }
 }
 
 @media screen and (min-width :576px ) {
