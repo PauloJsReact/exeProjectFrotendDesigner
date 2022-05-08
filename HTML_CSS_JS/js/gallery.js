@@ -5,6 +5,19 @@ var galleryImages = document.querySelectorAll(".jl-thumb-img");
 var closeGallery = document.querySelectorAll(".jl-toggle-gallery");
 var btnNext =document.querySelector(".jl-item-next");
 var btnPrev = document.querySelector(".jl-item-prev");
+var currCounter = document.querySelector(".jl-current-slaide");
+var totalCounter = document.querySelector(".jl-total-slaide");
+
+
+totalCounter.innerHTML = galleryImages.length
+
+const counterFormatter = function (n) {
+    if (n < 10) {
+        currCounter.innerHTML = "0"+n
+    }else{
+        currCounter.innerHTML = n
+    }
+}
 
 const getImageSrc = function () {
     for (let i = 0; i < galleryImages.length; i++) {
@@ -17,6 +30,8 @@ const getImageSrc = function () {
 
            overlay.classList.add("jl-is-open");
            frameContainer.classList.add("jl-is-open");
+
+           counterFormatter(itemNum);
         })
         
     }
@@ -50,6 +65,8 @@ const nextItem  = function () {
 
             frameImage.setAttribute("src",nextSrc);
             frameImage.setAttribute("data-index",nextIndex);
+
+            counterFormatter(nextIndex);
         }
         
     }
@@ -71,6 +88,8 @@ const prevItem = function () {
 
             frameImage.setAttribute("src",prevSrc);
             frameImage.setAttribute("data-index",prevIdex);
+
+            counterFormatter(prevIdex);
         }
     }
 }
