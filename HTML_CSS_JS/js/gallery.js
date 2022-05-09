@@ -7,6 +7,7 @@ var btnNext =document.querySelector(".jl-item-next");
 var btnPrev = document.querySelector(".jl-item-prev");
 var currCounter = document.querySelector(".jl-current-slaide");
 var totalCounter = document.querySelector(".jl-total-slaide");
+var skeletonLoading = document.querySelector(".jl-skeleton-loading");
 
 
 totalCounter.innerHTML = galleryImages.length
@@ -19,11 +20,29 @@ const counterFormatter = function (n) {
     }
 }
 
+
+//Skeleton imagem 
+
+const skeletonAnim = function (imagem) {
+    var myImage = new Image();
+    myImage.src = imagem;
+    myImage.addEventListener("load",function () {
+        skeletonLoading.classList.add("jl-fade-out");  
+        setTimeout(function () {
+            skeletonLoading.style.display="none";
+        },2000)
+   })
+}
+
+//Open gallery modal
+
 const getImageSrc = function () {
     for (let i = 0; i < galleryImages.length; i++) {
         galleryImages[i].addEventListener("click",function (con) {
            var imageSrc = this.getAttribute("data-src");
            var itemNum = this.getAttribute("data-item");
+
+           skeletonLoading.style.display = "flex";
 
            frameImage.setAttribute("src",imageSrc);
            frameImage.setAttribute("data-index",itemNum);
@@ -32,6 +51,7 @@ const getImageSrc = function () {
            frameContainer.classList.add("jl-is-open");
 
            counterFormatter(itemNum);
+           skeletonAnim(imageSrc)
         })
         
     }
@@ -63,10 +83,13 @@ const nextItem  = function () {
             var nextSrc = item.getAttribute("data-src");
             var nextIndex = item.getAttribute("data-item");
 
+            skeletonLoading.style.display = "flex";
+
             frameImage.setAttribute("src",nextSrc);
             frameImage.setAttribute("data-index",nextIndex);
 
             counterFormatter(nextIndex);
+            skeletonAnim(nextSrc);
         }
         
     }
@@ -86,10 +109,13 @@ const prevItem = function () {
             var prevSrc = itemNumP.getAttribute("data-src");
             var prevIdex = itemNumP.getAttribute("data-item");
 
+            skeletonLoading.style.display = "flex";
+
             frameImage.setAttribute("src",prevSrc);
             frameImage.setAttribute("data-index",prevIdex);
 
             counterFormatter(prevIdex);
+            skeletonAnim(prevSrc);
         }
     }
 }
