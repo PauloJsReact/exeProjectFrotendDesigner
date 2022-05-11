@@ -1,6 +1,9 @@
 //Declarando variaveis
 var btnContact = document.querySelector(".jl-btn-contact");
 var toggleModal = document.querySelectorAll(".jl-toggle-modal");
+var toggleMenu = document.querySelectorAll(".jl-toggle-menu");
+var menuMobile = document.querySelector(".jl-menu-mob");
+var btnIconMobileMenu = document.querySelector(".jl-btn-menu-mob ion-icon");
 
 //Page preloader
 window.addEventListener("load", function () {
@@ -20,6 +23,23 @@ btnContact.addEventListener("click", function () {
     this.classList.toggle("jl-change-ico");
 })
 
+//Abrindo e fechando o Menu Moobile
+
+for (let m = 0; m < toggleMenu.length; m++) {
+    toggleMenu[m].addEventListener("click",function () {
+        var overlayMenu = document.querySelector(".jl-menu-overlay");
+        overlayMenu.classList.toggle("jl-is-open")
+        menuMobile.classList.toggle("jl-menu-is-closed");
+        menuMobile.classList.toggle("jl-menu-is-open");
+
+        var icon = btnIconMobileMenu.getAttribute("name");
+        if (icon === "menu") {
+            btnIconMobileMenu.setAttribute("name","close");
+        }else{
+            btnIconMobileMenu.setAttribute("name","menu");
+        }
+    })
+}
 //  Abrindo e fechando o modal  Orçammento 
 
 for (let i = 0; i < toggleModal.length; i++) {
