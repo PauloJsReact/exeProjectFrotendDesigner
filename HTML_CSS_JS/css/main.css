@@ -1,95 +1,106 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothig:grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothig: grayscale;
 }
 
-p,label{
-    font-family: "Open Sans",sans-serif;
+p,
+label {
+    font-family: "Open Sans", sans-serif;
 }
+
 @keyframes fadeOut {
-    to{
+    to {
         opacity: 0;
     }
 }
 
 
 @keyframes lineDown {
-    0%{
-        transform: scale(1,0);
+    0% {
+        transform: scale(1, 0);
         transform-origin: top center;
     }
-    25%{
-        transform: scale(1,1);
+
+    25% {
+        transform: scale(1, 1);
         transform-origin: top center;
     }
-    75%{
-        transform: scale(1,1);
+
+    75% {
+        transform: scale(1, 1);
         transform-origin: top center;
     }
-    76%{
-        transform:scale(1,1);
+
+    76% {
+        transform: scale(1, 1);
         transform-origin: bottom center;
     }
-    100%{
-        transform: scale(1,0);
+
+    100% {
+        transform: scale(1, 0);
         transform-origin: bottom center;
     }
 }
 
 @keyframes arrowDown {
-    0%{
+    0% {
         bottom: 25px;
     }
-    25%{
+
+    25% {
         bottom: 15px;
         opacity: 1;
     }
-    70%{
+
+    70% {
         bottom: 10px;
         opacity: 1;
     }
-    100%{
+
+    100% {
         bottom: 5px;
         opacity: 0;
     }
 }
 
 @keyframes slaidTopIn {
-    to{
+    to {
         top: 15%;
     }
 }
 
 @keyframes scaleRight {
-    to{
+    to {
         transform: scaleX(1);
     }
 }
 
 @keyframes scaleUp {
-    to{
-        transform:scale(1) ;
+    to {
+        transform: scale(1);
     }
 }
 
 @keyframes fadefronLeft {
-    to{
+    to {
         left: 0;
         opacity: 1;
     }
 }
 
 @keyframes skeletonBlur {
-    to{
+    to {
         background-position: 250% -150px;
     }
 }
 
 @media screen and (min-width:320px) {
-    .jl-page-wrapper, .jl-preloader{
+
+    .jl-page-wrapper,
+    .jl-preloader {
         width: 100%;
         height: 100vh;
         display: table;
@@ -98,7 +109,7 @@ p,label{
     }
 
 
-    .jl-preloader{
+    .jl-preloader {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -110,7 +121,8 @@ p,label{
         left: 0;
     }
 
-    .jl-overlay,.jl-menu-overlay{
+    .jl-overlay,
+    .jl-menu-overlay {
         width: 100%;
         height: 100vh;
         display: none;
@@ -118,10 +130,10 @@ p,label{
         position: fixed;
         left: 0;
         right: 0;
-        background-color: rgba(44, 201, 104,0.95);
+        background-color: rgba(44, 201, 104, 0.95);
     }
 
-    .jl-modal{
+    .jl-modal {
         width: 800px;
         padding: 30px;
         display: none;
@@ -133,13 +145,15 @@ p,label{
         margin: 0 auto;
         z-index: 1200;
     }
-    .jl-modal-header,.jl-modal-body .jl-form{
+
+    .jl-modal-header,
+    .jl-modal-body .jl-form {
         width: 100%;
         display: table;
         position: relative;
     }
 
-    .jl-close-modal{
+    .jl-close-modal {
         width: 45px;
         height: 45px;
         border-radius: 50%;
@@ -148,7 +162,7 @@ p,label{
         line-height: center;
         position: absolute;
         top: -15px;
-        right:-15px;
+        right: -15px;
         border: none;
         background-color: #2f2f2f;
     }
@@ -159,7 +173,8 @@ p,label{
         display: inline-block;
     }
 
-    .jl-field , .jl-textarea{
+    .jl-field,
+    .jl-textarea {
         width: 100%;
         background-color: #212121;
         border-radius: 4px;
@@ -168,21 +183,23 @@ p,label{
         text-indent: 15px;
         font-size: 16px;
     }
-    .jl-field{
+
+    .jl-field {
         height: 45px;
     }
 
-    .jl-topbar{
+    .jl-topbar {
         width: 100%;
         height: 110px;
         display: block;
-        background-color:transparent;
+        background-color: transparent;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 200;
     }
-    .jl-logo{
+
+    .jl-logo {
         width: 75px;
         height: 110px;
         float: left;
@@ -191,16 +208,18 @@ p,label{
         border-radius: 0 0 37px 0;
     }
 
-    .jl-logo img{
+    .jl-logo img {
         width: 46.684px;
         height: 31.196px;
         display: block;
         margin: 55px auto 0 auto;
     }
-    .jl-menu{
+
+    .jl-menu {
         display: none;
     }
-    .jl-menu-mob{
+
+    .jl-menu-mob {
         width: 240px;
         height: 100vh;
         display: block;
@@ -219,11 +238,11 @@ p,label{
         display: block;
         line-height: 60px;
         color: #fff;
-        font-family: "Open Sans",sans-serif;
+        font-family: "Open Sans", sans-serif;
         text-decoration: none;
     }
 
-    .jl-btn-menu-mob{
+    .jl-btn-menu-mob {
         width: 54px;
         height: 54px;
         display: block;
@@ -237,19 +256,21 @@ p,label{
         z-index: 1250;
         cursor: pointer;
     }
-    .jl-menu-is-open{
+
+    .jl-menu-is-open {
         right: 0;
     }
-    .jl-menu-is-closed{
+
+    .jl-menu-is-closed {
         right: -240px;
     }
 
-    .jl-btn-menu-mob ion-icon{
+    .jl-btn-menu-mob ion-icon {
         vertical-align: middle;
     }
 
 
-    .jl-btn-contact{
+    .jl-btn-contact {
         width: 45px;
         height: 45px;
         background-color: #2ccb69;
@@ -266,7 +287,7 @@ p,label{
         cursor: pointer;
     }
 
-    .jl-contact-info{
+    .jl-contact-info {
         padding: 25px;
         width: 245px;
         height: 150px;
@@ -276,7 +297,8 @@ p,label{
         z-index: 200;
         display: none;
     }
-    .jl-contact-info-inner{
+
+    .jl-contact-info-inner {
         display: table;
         width: 100%;
     }
@@ -286,7 +308,8 @@ p,label{
         line-height: 24px;
     }
 
-    .jl-social-links, .jl-social-links-circle{
+    .jl-social-links,
+    .jl-social-links-circle {
         width: 100%;
         height: 45px;
         display: block;
@@ -294,43 +317,47 @@ p,label{
         left: -12px;
         margin-top: 7px;
     }
-    .jl-social-links-circle{
+
+    .jl-social-links-circle {
         left: 0;
     }
 
-    .jl-social,.jl-social-links-circle .jl-social{
+    .jl-social,
+    .jl-social-links-circle .jl-social {
         width: 45px;
         height: 45px;
         display: inline-block;
     }
 
-    .jl-social-links-circle .jl-social{
+    .jl-social-links-circle .jl-social {
         border-radius: 50%;
         text-align: center;
-        transition: all 0,2s ease-out;
+        transition: all 0, 2s ease-out;
     }
 
 
-    .jl-social-links-circle .jl-social ion-icon{
+    .jl-social-links-circle .jl-social ion-icon {
         height: 45px;
-        transition: all 0,2s ease-out;
+        transition: all 0, 2s ease-out;
     }
-    .jl-social-links-circle .jl-social:hover{
+
+    .jl-social-links-circle .jl-social:hover {
         background-color: #000;
     }
-    .jl-social-links-circle .jl-social ion-icon:hover{ 
-      color: #2ccb69;
+
+    .jl-social-links-circle .jl-social ion-icon:hover {
+        color: #2ccb69;
     }
 
 
-    .jl-social > img{
+    .jl-social>img {
         width: 20px;
         height: auto;
         display: block;
-        margin: 13px auto 0; 
+        margin: 13px auto 0;
     }
 
-    .jl-coner{
+    .jl-coner {
         width: 25px;
         height: 25px;
         display: block;
@@ -338,7 +365,7 @@ p,label{
         display: relative;
     }
 
-    .jl-coner:after{
+    .jl-coner:after {
         content: '';
         width: 24px;
         height: 25px;
@@ -351,19 +378,30 @@ p,label{
 
     /*-----HOME------*/
 
-    .jl-display-text{
+    .jl-display-text {
         margin-top: 10%;
     }
 
-    
-    #jl-home-presentation{
+
+    .jl-home-presentation {
         background-image: url("../images/joao-lemon-designer-home.png");
         background-repeat: no-repeat;
         background-position: 50% bottom;
         position: relative;
+        background-size: 130% auto;
     }
 
-    .jl-scroll-down{
+    .jl-home-presentation h1 {
+        margin-top: 60px;
+        text-align: center;
+        font-size: 60px;
+    }
+
+    .jl-home-presentation p {
+        text-align: center;
+    }
+
+    .jl-scroll-down {
         width: 70px;
         height: 105px;
         background-color: #2ccb69;
@@ -374,9 +412,10 @@ p,label{
         right: 0;
         bottom: 0;
         margin: 0 auto;
-        z-index:100 ;
+        z-index: 100;
     }
-    .jl-arrow-down{
+
+    .jl-arrow-down {
         width: 100%;
         height: 75px;
         margin-top: 30px;
@@ -384,7 +423,7 @@ p,label{
         position: relative;
     }
 
-    .jl-arrow-down img{
+    .jl-arrow-down img {
         width: 16px;
         height: 10px;
         display: block;
@@ -392,13 +431,13 @@ p,label{
         right: 0;
         position: absolute;
         bottom: 15px;
-        margin:  0 auto;
+        margin: 0 auto;
         opacity: 0;
-        animation: arrowDown 1.5s linear 1.5s infinite ;
+        animation: arrowDown 1.5s linear 1.5s infinite;
     }
 
-    .jl-arrow-down:before{
-        content:"";
+    .jl-arrow-down:before {
+        content: "";
         width: 2px;
         height: 45px;
         display: block;
@@ -415,23 +454,24 @@ p,label{
 
     /*----------- Home - portifolio --------------*/
 
-    .jl-portifolio-navigator{
+    .jl-portifolio-navigator {
         width: 145px;
         height: 400px;
         display: table;
-        position:absolute;
+        position: absolute;
         left: 15px;
         top: 26vh;
     }
 
-    .jl-navigator-counter{
+    .jl-navigator-counter {
         width: 100%;
         height: 90px;
         display: block;
         margin-bottom: 60px;
         position: relative;
     }
-    .jl-navigator-counter:before{
+
+    .jl-navigator-counter:before {
         content: "";
         display: block;
         width: 35px;
@@ -441,37 +481,38 @@ p,label{
         top: 3px;
         left: 0;
     }
-  
 
-    .jl-navigator-counter span{
-        font-family: "Open Sans",sans-serif;
+
+    .jl-navigator-counter span {
+        font-family: "Open Sans", sans-serif;
         font-size: 120px;
         line-height: 90px;
         font-weight: 600;
     }
- 
 
-    .jl-item-navigator{
+
+    .jl-item-navigator {
         width: 100%;
         display: table;
     }
 
-    .jl-item-navigator a{
+    .jl-item-navigator a {
         width: 20px;
         height: 1px;
         display: block;
-        margin: 0 0 80px 35px ;
+        margin: 0 0 80px 35px;
         background-color: #4d4c4c;
     }
-    .jl-item-navigator a.jl-item-active{
+
+    .jl-item-navigator a.jl-item-active {
         background-color: #2ccb69;
     }
 
-    .jl-item-navigator a:last-child{
+    .jl-item-navigator a:last-child {
         margin-bottom: 30px;
     }
 
-    .jl-items-next-prev{
+    .jl-items-next-prev {
         width: 100%;
         height: 45px;
         display: flex;
@@ -481,21 +522,22 @@ p,label{
         border-radius: 23px;
     }
 
-    .jl-items-next-prev > div{
+    .jl-items-next-prev>div {
         height: 32px;
     }
 
-    .jl-items-counter{
-        font-family: "Open Sans",sans-serif;
+    .jl-items-counter {
+        font-family: "Open Sans", sans-serif;
         color: #4c4c4c;
         line-height: 32px
     }
 
-    .jl-items-counter span:nth-child(1){
+    .jl-items-counter span:nth-child(1) {
         color: #bcbcbc;
     }
 
-    .jl-item-prev , .jl-item-next {
+    .jl-item-prev,
+    .jl-item-next {
         width: 45px;
         color: #2ccb69;
         text-align: center;
@@ -504,32 +546,32 @@ p,label{
 
     ion-icon {
         font-size: 32px;
-      }
-    
-    .jl-slider-container{
+    }
+
+    .jl-slider-container {
         display: block;
         overflow: hidden;
     }
 
-    .jl-slaider-list{
+    .jl-slaider-list {
         width: auto;
         height: 700px;
         display: block;
         list-style: none;
     }
 
-    .jl-slaider-list .jl-portifolio-item{
+    .jl-slaider-list .jl-portifolio-item {
         display: block;
         float: left;
         height: 500px;
         margin-top: calc(26vh - 75px);
     }
 
-    .jl-portifolio-list .jl-portifolio-item{
+    .jl-portifolio-list .jl-portifolio-item {
         margin-bottom: 100px;
     }
 
-    .jl-slaider-list .jl-portfolio-info{
+    .jl-slaider-list .jl-portfolio-info {
         width: calc(100%-75px);
         display: table;
         margin-top: 73px;
@@ -538,25 +580,27 @@ p,label{
         left: -75px;
     }
 
-    .jl-portifolio-list{
+    .jl-portifolio-list {
         list-style: none;
     }
 
-    .jl-portifolio-list .jl-portfolio-info{
+    .jl-portifolio-list .jl-portfolio-info {
         width: calc(100%-105px);
     }
 
-    .jl-slaider-list .jl-portifolio-item-thumb, .jl-portifolio-list .jl-portifolio-item-thumb{
+    .jl-slaider-list .jl-portifolio-item-thumb,
+    .jl-portifolio-list .jl-portifolio-item-thumb {
         width: calc(100%-30px);
         display: table;
         padding: 75px 0 19px 0;
         position: relative;
     }
-    .jl-portifolio-list .jl-portifolio-item-thumb{
+
+    .jl-portifolio-list .jl-portifolio-item-thumb {
         margin-left: 75px;
     }
-    
-    .jl-slaider-list .jl-portifolio-item-box{
+
+    .jl-slaider-list .jl-portifolio-item-box {
         width: 100%;
         height: 100%;
         display: block;
@@ -567,7 +611,8 @@ p,label{
         transform: scaleX(0);
         transform-origin: right;
     }
-    .jl-portifolio-list .jl-portifolio-item-box{
+
+    .jl-portifolio-list .jl-portifolio-item-box {
         width: 100%;
         height: 100%;
         display: block;
@@ -577,13 +622,14 @@ p,label{
         left: 0;
     }
 
-    .jl-slaider-list .jl-portifolio-item-thumb > button,.jl-portifolio-list .jl-portifolio-item-thumb > button{
+    .jl-slaider-list .jl-portifolio-item-thumb>button,
+    .jl-portifolio-list .jl-portifolio-item-thumb>button {
         margin-top: 17px;
         margin-right: 75px;
         float: right;
     }
-    
-    .jl-slaider-list .jl-portifolio-item-thumb img{
+
+    .jl-slaider-list .jl-portifolio-item-thumb img {
         width: 100%;
         max-width: 100%;
         height: auto;
@@ -592,7 +638,7 @@ p,label{
         transform: scale(0);
     }
 
-    .jl-portifolio-list .jl-portifolio-item-thumb img{
+    .jl-portifolio-list .jl-portifolio-item-thumb img {
         width: 100%;
         max-width: 100%;
         height: auto;
@@ -606,49 +652,52 @@ p,label{
 
     /*-------- PORTIFOLIO ----------*/
 
-    .jl-section-offset-top{
+    .jl-section-offset-top {
         margin-top: 130px;
 
     }
 
-    .jl-portifolio-list .jl-portifolio-item:nth-child(odd) .jl-portfolio-info{
+    .jl-portifolio-list .jl-portifolio-item:nth-child(odd) .jl-portfolio-info {
         text-align: right;
         margin-top: 70px;
     }
 
-    .jl-portifolio-list .jl-portifolio-item:nth-child(odd) .jl-portfolio-info button{
+    .jl-portifolio-list .jl-portifolio-item:nth-child(odd) .jl-portfolio-info button {
         float: right;
     }
 
-    .jl-portifolio-list .jl-portifolio-item:nth-child(even) > .row{
+    .jl-portifolio-list .jl-portifolio-item:nth-child(even)>.row {
         flex-direction: row-reverse;
     }
 
-    
-    .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portfolio-info{
+
+    .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portfolio-info {
         margin-left: 105px;
     }
 
-    .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portifolio-item-thumb button{
+    .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portifolio-item-thumb button {
         float: left;
-        margin-left:75px;
+        margin-left: 75px;
 
     }
-    .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portifolio-item-thumb img{
+
+    .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portifolio-item-thumb img {
         left: 75px;
     }
 
     /* Sobre */
 
-    #jl-avatar-sobre img{
+    #jl-avatar-sobre img {
         position: relative;
         left: -15px;
     }
-    .jl-box-img{
+
+    .jl-box-img {
         width: 100%;
         display: table;
     }
-    .jl-img-responsive{
+
+    .jl-img-responsive {
         width: 100%;
         max-width: 100%;
         height: auto;
@@ -657,7 +706,7 @@ p,label{
 
     /*---------Detalhes----------*/
 
-    .jl-hero{
+    .jl-hero {
         height: 500px;
         background-image: url("../pages/portifolio/img/hero.png");
         background-repeat: no-repeat;
@@ -666,19 +715,20 @@ p,label{
         display: block;
     }
 
-    .jl-hero h1{
+    .jl-hero h1 {
         padding-bottom: 50px;
     }
 
 
-    .jl-hero-inner{
+    .jl-hero-inner {
         height: 500px;
     }
-    .jl-hero-inner-content{
+
+    .jl-hero-inner-content {
         position: relative;
     }
 
-    .jl-hero-inner-content:before{
+    .jl-hero-inner-content:before {
         content: "";
         display: block;
         width: 100%;
@@ -691,47 +741,49 @@ p,label{
         padding: 30px;
     }
 
-    .jl-project-stats{
+    .jl-project-stats {
         width: 100%;
         height: 100%;
         display: table;
         border-right: 1px solid #2ccb69;
     }
-    .jl-post{
+
+    .jl-post {
         width: 100%;
         display: table;
     }
 
-    .jl-post p{
+    .jl-post p {
         margin-bottom: 30px;
     }
 
-    .jl-post-15px p{
+    .jl-post-15px p {
         margin-bottom: 15px;
     }
 
-    .jl-post-section{
+    .jl-post-section {
         width: 100%;
         display: table;
         padding: 45px 0;
     }
 
-    .jl-pre-gallery{
+    .jl-pre-gallery {
         padding-bottom: 350px;
     }
-    
-    .jl-post-gallery .container{
+
+    .jl-post-gallery .container {
         position: relative;
         top: -270px;
     }
-    .jl-gallery-inner{
+
+    .jl-gallery-inner {
         width: 100%;
         height: 100%;
         display: block;
         position: relative;
     }
 
-    .jl-gallery-inner .jl-skeleton-loading{
+    .jl-gallery-inner .jl-skeleton-loading {
         width: 86%;
         height: 100%;
         display: none;
@@ -745,27 +797,28 @@ p,label{
         z-index: 1250;
     }
 
-    .jl-gallery-inner .jl-skeleton-loading > div{
+    .jl-gallery-inner .jl-skeleton-loading>div {
         background-color: #dedede;
         margin: 10% 0;
         width: 90%;
         border-radius: 8px;
         background-image: url("../images/skeleton-loading-blur.svg");
         background-repeat: no-repeat;
-        background-position:-100% -150px;
+        background-position: -100% -150px;
         animation: skeletonBlur 2s infinite ease-out;
     }
-    
-    .jl-gallery-inner .jl-skeleton-loading > div:first-child,.jl-gallery-inner .jl-skeleton-loading > div:last-child{
+
+    .jl-gallery-inner .jl-skeleton-loading>div:first-child,
+    .jl-gallery-inner .jl-skeleton-loading>div:last-child {
         height: 20%;
     }
 
-    .jl-gallery-inner .jl-skeleton-loading > div:nth-child(2){
+    .jl-gallery-inner .jl-skeleton-loading>div:nth-child(2) {
         height: 60%;
     }
 
 
-    .jl-gallery-frame-container{
+    .jl-gallery-frame-container {
         width: 400px;
         display: none;
         position: fixed;
@@ -776,13 +829,13 @@ p,label{
         z-index: 1500;
     }
 
-    .jl-gallery-frame-container .jl-items-next-prev{
+    .jl-gallery-frame-container .jl-items-next-prev {
         width: 150px;
         margin: 75px auto 0 auto;
-        
+
     }
 
-    img.jl-gallery-frame{
+    img.jl-gallery-frame {
         width: 100%;
         max-width: 100%;
         height: auto;
@@ -792,8 +845,8 @@ p,label{
         z-index: 1300;
     }
 
-    
-    .jl-gallery-frame-image{
+
+    .jl-gallery-frame-image {
         width: 87%;
         height: 87%;
         margin: 0 auto;
@@ -804,7 +857,7 @@ p,label{
         top: 20px;
     }
 
-    .jl-close-gallery{
+    .jl-close-gallery {
         width: 45px;
         height: 45px;
         position: absolute;
@@ -815,8 +868,9 @@ p,label{
         border: none;
         border-radius: 50%;
     }
-    .jl-close-gallery ion-icon{
-        color:#2ccb69;
+
+    .jl-close-gallery ion-icon {
+        color: #2ccb69;
         width: 20px;
         height: 20px;
         text-align: center;
@@ -826,42 +880,55 @@ p,label{
     }
 }
 
-@media screen and (min-width :576px ) {
-    
+@media screen and (min-width :576px) {}
+
+@media screen and (min-width :700px) {
+    .jl-home-presentation {
+        background-size: 100%;
+    }
 }
 
 @media screen and (min-width:768px) {
-    
+    .jl-home-presentation {
+        background-size: 100%;
+    }
 }
-@media screen and (min-width:962px) {
-    .jl-btn-menu-mob,.jl-menu-mob{
+
+@media screen and (min-width:992px) {
+
+    .jl-btn-menu-mob,
+    .jl-menu-mob {
         display: none;
     }
-    .jl-menu{
+
+    .jl-menu {
         display: table;
         float: left;
         height: 110px;
         margin-left: 30px;
     }
-    .jl-menu a{
+
+    .jl-menu a {
         font-family: "Open Sans";
         color: #bcbcbc;
         font-size: 16px;
         text-transform: lowercase;
         display: inline-block;
-        margin: 50px  20px 0  20px;
+        margin: 50px 20px 0 20px;
         text-decoration: none;
         font-weight: 400;
         position: relative;
     }
-    .jl-menu a:first-child{
+
+    .jl-menu a:first-child {
         margin-left: 0;
     }
-    .jl-menu a:hover{
-        color:#2ccb69
+
+    .jl-menu a:hover {
+        color: #2ccb69
     }
 
-    .jl-menu a:before{
+    .jl-menu a:before {
         content: "";
         width: 100%;
         height: 4px;
@@ -871,31 +938,53 @@ p,label{
         bottom: -6px;
         left: 0;
         transition: all 0.2s ease-out;
-        transform: scale(0,1);
+        transform: scale(0, 1);
         transform-origin: center left;
     }
-    .jl-menu a:hover:before{
-        transform: scale(1,1);
+
+    .jl-menu a:hover:before {
+        transform: scale(1, 1);
     }
 
+
+    .jl-title-xlarge {
+        font-size: 120px;
+    }
+
+    .jl-home-presentation {
+        background-size: auto auto;
+    }
+
+    .jl-home-presentation h1 {
+        margin-top: 0;
+        text-align: left;
+    }
+
+    .jl-home-presentation p {
+        text-align: left;
+    }
+
+    .jl-home-presentation .jl-btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .jl-home-presentation .jl-btn {
+        margin-left: 0;
+    }
 }
 
-@media screen and (min-width:1200px) {
-    
-}
+@media screen and (min-width:1200px) {}
 
-@media screen and (min-width:1364px) {
-    
-}
+@media screen and (min-width:1364px) {}
 
-@media screen and (min-width:1600px) {
-    
-}
+@media screen and (min-width:1600px) {}
+
 /*BOTÕES*/
-.jl-btn{
+.jl-btn {
     display: table;
     text-align: center;
-    font-family: "Open Sans",sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 600;
     margin: 0 auto;
     border: none;
@@ -904,7 +993,8 @@ p,label{
     position: relative;
 
 }
-.jl-btn ion-icon{
+
+.jl-btn ion-icon {
     font-size: 21px;
     display: inline-block;
     vertical-align: middle;
@@ -912,12 +1002,12 @@ p,label{
     margin-top: -3px;
 }
 
-.jl-btn-block{
+.jl-btn-block {
     display: block;
     width: 100%;
 }
 
-.jl-btn-small{
+.jl-btn-small {
     height: 28px;
     line-height: 28px;
     padding: 0 20px;
@@ -925,7 +1015,7 @@ p,label{
     font-size: 11px;
 }
 
-.jl-btn-medium{
+.jl-btn-medium {
     height: 38px;
     line-height: 38px;
     padding: 0 27px;
@@ -933,205 +1023,204 @@ p,label{
     font-size: 14px;
 }
 
-.jl-btn-large{
+.jl-btn-large {
     height: 45px;
     line-height: 45px;
     padding: 0 35px;
     border-radius: 23px;
     font-size: 16px;
 }
-.jl-btn-green{
+
+.jl-btn-green {
     background-color: #2ccb69;
     color: #1c1c1c;
 }
 
-.jl-btn-green:hover{
+.jl-btn-green:hover {
     background-color: #179949;
     color: #fff;
 }
 
 
-.jl-btn-dark{
+.jl-btn-dark {
     background-color: #1f1e1e;
     color: #2ccb69;
 }
 
 
-.jl-btn-dark:hover{
+.jl-btn-dark:hover {
     background-color: #353434;
     color: #fff;
 }
 
 /* Classes utilitarias*/
-.jl-title{
-    font-family:  'Abril Fatface', serif;
+.jl-title {
+    font-family: 'Abril Fatface', serif;
     font-weight: normal;
 }
 
-.jl-subtitle{
-    font-family: "Open Sans",sans-serif;
+.jl-subtitle {
+    font-family: "Open Sans", sans-serif;
     font-weight: 800;
 }
 
-.jl-title-medium{
+.jl-title-medium {
     font-size: 48px;
 }
 
-.jl-text-aling-center{
+.jl-text-aling-center {
     text-align: center;
 }
 
-.jl-title-large{
+.jl-title-large {
     font-size: 50px;
 }
-.jl-title-xlarge{
-    font-size: 120px;
-}
 
-.jl-text-green{
+
+.jl-text-green {
     color: #2ccb69;
 }
 
-.jl-text-dark{
+.jl-text-dark {
     color: #4d4c4c;
 }
 
-.jl-text-light{
+.jl-text-light {
     color: #bcbcbc;
 }
 
-.jl-text-black{
+.jl-text-black {
     color: #000;
 }
 
-.jl-bg-green{
+.jl-bg-green {
     background-color: #2ccb69;
 }
 
-.jl-bg-dark{
+.jl-bg-dark {
     background-color: #4d4c4c;
 }
 
-.jl-bg-light{
+.jl-bg-light {
     background-color: #bcbcbc;
 }
 
-.jl-bg-black{
+.jl-bg-black {
     background-color: #000;
 }
 
-.jl-mar-15{
+.jl-mar-15 {
     margin: 15px;
 }
 
-.jl-mar-top-15{
+.jl-mar-top-15 {
     margin-top: 15px;
 }
 
-.jl-mar-right-15{
+.jl-mar-right-15 {
     margin-right: 15px;
 }
 
-.jl-mar-bottom-15{
+.jl-mar-bottom-15 {
     margin-bottom: 15px;
 }
 
-.jl-mar-left-15{
+.jl-mar-left-15 {
     margin-left: 15px;
 }
 
-.jl-padding-15{
+.jl-padding-15 {
     padding: 15px;
 }
 
-.jl-padding-top-15{
+.jl-padding-top-15 {
     padding-top: 15px;
 }
 
-.jl-padding-right-15{
+.jl-padding-right-15 {
     padding-right: 15px;
 }
 
-.jl-padding-bottom-15{
+.jl-padding-bottom-15 {
     padding-bottom: 15px;
 }
 
-.jl-padding-left-15{
+.jl-padding-left-15 {
     padding-left: 15px;
 }
 
 
 
-.jl-mar-30{
+.jl-mar-30 {
     margin: 30px;
 }
 
-.jl-mar-top-30{
+.jl-mar-top-30 {
     margin-top: 30px;
 }
 
-.jl-mar-right-30{
+.jl-mar-right-30 {
     margin-right: 30px;
 }
 
-.jl-mar-bottom-30{
+.jl-mar-bottom-30 {
     margin-bottom: 30px;
 }
 
-.jl-mar-left-30{
+.jl-mar-left-30 {
     margin-left: 30px;
 }
 
-.jl-padding-30{
+.jl-padding-30 {
     padding: 30px;
 }
 
-.jl-padding-top-30{
+.jl-padding-top-30 {
     padding-top: 30px;
 }
 
-.jl-padding-right-30{
+.jl-padding-right-30 {
     padding-right: 30px;
 }
 
-.jl-padding-bottom-30{
+.jl-padding-bottom-30 {
     padding-bottom: 30px;
 }
 
-.jl-padding-left-30{
+.jl-padding-left-30 {
     padding-left: 30px;
 }
 
-.jl-full-height{
+.jl-full-height {
     height: 100vh;
     position: relative;
 }
 
-.jl-first-section{
+.jl-first-section {
     height: calc(100vh - 30px);
 }
 
 
-.jl-no-padding{
+.jl-no-padding {
     padding: 0 !important;
 }
 
-.jl-no-radius-left{
+.jl-no-radius-left {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 
-.jl-no-radius-right{
+.jl-no-radius-right {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
 }
 
-.jl-page-list{
+.jl-page-list {
     list-style: none;
-    font-family: "Open Sans",sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
-.jl-page-list > li{
+.jl-page-list>li {
     font-weight: 14px;
     line-height: 21px;
     margin-bottom: 15px;
@@ -1139,7 +1228,8 @@ p,label{
     padding-left: 20px;
 
 }
-.jl-page-list > li:before{
+
+.jl-page-list>li:before {
     content: "";
     width: 8px;
     height: 8px;
@@ -1155,38 +1245,38 @@ p,label{
 /* CLASSES DE COMPORTAMENTO */
 
 
-.jl-is-open{
+.jl-is-open {
     display: block;
 }
 
 
-.jl-change-ico{
+.jl-change-ico {
     background-position-y: -45px;
 }
 
-.jl-fade-out{
+.jl-fade-out {
     animation: fadeOut 2s forwards ease-out;
 }
 
-.jl-slaid-top-in{
-    animation: slaidTopIn 0.6s forwards cubic-bezier( 0, 1.03, 1, 0.43 );
+.jl-slaid-top-in {
+    animation: slaidTopIn 0.6s forwards cubic-bezier(0, 1.03, 1, 0.43);
 }
 
-.jl-scale-right{
-    animation: scaleRight 0.7s  0.2s forwards cubic-bezier(0,1.01,.32,1);
+.jl-scale-right {
+    animation: scaleRight 0.7s 0.2s forwards cubic-bezier(0, 1.01, .32, 1);
 }
 
-.jl-scale-up{
-    animation: scaleUp  0.5s  0.5s forwards cubic-bezier(0,1.01,.32,1);
+.jl-scale-up {
+    animation: scaleUp 0.5s 0.5s forwards cubic-bezier(0, 1.01, .32, 1);
 }
 
-.jl-fade-from-left{
-    animation: fadefronLeft 2s 0.7s forwards cubic-bezier(0,1.01,.32,1);
+.jl-fade-from-left {
+    animation: fadefronLeft 2s 0.7s forwards cubic-bezier(0, 1.01, .32, 1);
 }
 
 
 
-.jl-bg-green{
+.jl-bg-green {
     background-color: #2ccb69;
 }
 
@@ -1194,18 +1284,18 @@ p,label{
 
 
 
-.red{
-background-color: red;
+.red {
+    background-color: red;
 }
 
-.blue{
+.blue {
     background-color: blue;
 }
 
-.yellow{
+.yellow {
     background-color: yellow;
 }
 
-.purple{
+.purple {
     background-color: purple;
 }
