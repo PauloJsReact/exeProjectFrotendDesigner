@@ -629,7 +629,11 @@ label {
         left: 0;
     }
 
-    .jl-slaider-list .jl-portifolio-item-thumb>button,
+    .jl-slaider-list .jl-portifolio-item-thumb>button {
+        margin: 17px auto 0 auto;
+        float: none;
+    }
+
     .jl-portifolio-list .jl-portifolio-item-thumb>button {
         margin-top: 17px;
         margin-right: 75px;
@@ -637,11 +641,11 @@ label {
     }
 
     .jl-slaider-list .jl-portifolio-item-thumb img {
-        width: 100%;
+        width: 90%;
         max-width: 100%;
         height: auto;
         position: relative;
-        left: -75px;
+        left: 5%;
         transform: scale(0);
     }
 
@@ -1005,7 +1009,8 @@ label {
     }
 
     .jl-slaider-list .jl-portifolio-item-thumb>button {
-        margin-right: 30px;
+        margin: 17px 30px 0 0;
+        float: right;
     }
 
     .jl-navigator-counter span {
@@ -1134,7 +1139,7 @@ label {
 
 
 .jl-btn-dark {
-    background-color: #1f1e1e;
+    background-color: #000000;
     color: #2ccb69;
 }
 
