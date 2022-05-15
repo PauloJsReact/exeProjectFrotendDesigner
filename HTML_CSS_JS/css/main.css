@@ -564,7 +564,7 @@ label {
         display: block;
         float: left;
         height: 500px;
-        margin-top: calc(26vh - 75px);
+        margin-top: 0;
     }
 
     .jl-portifolio-list .jl-portifolio-item {
@@ -574,7 +574,7 @@ label {
     .jl-slaider-list .jl-portfolio-info {
         width: 100%;
         display: table;
-        margin-top: 73px;
+        margin-top: 15px;
         position: relative;
         opacity: 0;
     }
@@ -595,7 +595,14 @@ label {
         width: calc(100%-105px);
     }
 
-    .jl-slaider-list .jl-portifolio-item-thumb,
+    .jl-slaider-list .jl-portifolio-item-thumb {
+        width: 100%;
+        display: table;
+        padding: 30px 0 19px 0;
+        position: relative;
+    }
+
+
     .jl-portifolio-list .jl-portifolio-item-thumb {
         width: calc(100%-30px);
         display: table;
@@ -1029,10 +1036,17 @@ label {
         text-align: left;
     }
 
+    .jl-slaider-list .jl-portifolio-item {
+        display: block;
+        float: left;
+        height: 500px;
+        margin-top: calc(26vh - 75px);
+    }
 
     .jl-slaider-list .jl-portfolio-info {
         width: calc(100%-75px);
         left: -75px;
+        margin-top: 73px;
     }
 
     jl-slaider-list .jl-portfolio-info button {
@@ -1207,6 +1221,10 @@ label {
 
 .jl-mar-top-15 {
     margin-top: 15px;
+}
+
+.jl-mar-top-60 {
+    margin-top: 60px;
 }
 
 .jl-mar-right-15 {
