@@ -612,7 +612,7 @@ label {
 
 
     .jl-portifolio-list .jl-portifolio-item-thumb {
-        width: calc(100%-30px);
+        width: 100%;
         display: table;
         padding: 75px 0 19px 0;
         position: relative;
@@ -1018,9 +1018,9 @@ label {
     }
 
     .jl-slaider-list .jl-portifolio-item-thumb img {
-        width: 120%;
-        max-width: 120%;
-        left: -105px;
+        width: calc(100% + 45px);
+        max-width: calc(100% + 45px);
+        left: -75px;
     }
 
     .jl-slaider-list .jl-portifolio-item-thumb>button {
@@ -1117,8 +1117,18 @@ label {
         margin-left: 105px;
     }
 
+    .jl-portifolio-list .jl-portifolio-item-thumb {
+        padding: 30px 0 19px 0;
+    }
+
+    .jl-portifolio-list .jl-portifolio-item-thumb img {
+        width: calc(100% + 45px);
+        max-width: calc(100% + 45px);
+    }
+
+
     .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portifolio-item-thumb img {
-        left: 75px;
+        left: 30px;
     }
 
     .jl-portifolio-list .jl-portifolio-item:nth-child(odd) .jl-portifolio-item-thumb img {
@@ -1181,6 +1191,25 @@ label {
     .jl-navigator-counter:before {
         width: 35px;
     }
+
+
+    .jl-portifolio-list .jl-portifolio-item-thumb {
+        padding: 75px 0 19px 0;
+    }
+
+    .jl-portifolio-list .jl-portifolio-item-thumb img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portifolio-item-thumb img {
+        left: 75px;
+    }
+
+    .jl-portifolio-list .jl-portifolio-item:nth-child(odd) .jl-portifolio-item-thumb img {
+        left: -75px;
+    }
+
 
 
 }
