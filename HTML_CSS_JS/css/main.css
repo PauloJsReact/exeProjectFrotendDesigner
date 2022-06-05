@@ -684,12 +684,20 @@ label {
     }
 
     .jl-portifolio-list .jl-portifolio-item:nth-child(odd) .jl-portfolio-info {
+        width: 100%;
         text-align: right;
         margin-top: 70px;
     }
 
-    .jl-portifolio-list .jl-portifolio-item:nth-child(odd) .jl-portfolio-info button {
-        float: right;
+    .jl-portifolio-list .jl-portifolio-item:nth-child(odd) .jl-portfolio-info button,
+    .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portfolio-info button {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .jl-portifolio-list .jl-portifolio-item:nth-child(odd) .jl-portfolio-info p,
+    .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portfolio-info p {
+        text-align: center;
     }
 
     .jl-portifolio-list .jl-portifolio-item:nth-child(even)>.row {
@@ -698,7 +706,9 @@ label {
 
 
     .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portfolio-info {
-        margin-left: 105px;
+        width: 100%;
+        margin-left: 0;
+
     }
 
     .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portifolio-item-thumb button {
@@ -1094,6 +1104,35 @@ label {
         height: 100vh;
     }
 
+    .jl-portifolio-list .jl-portifolio-item:nth-child(odd) .jl-portfolio-info {
+        text-align: right;
+        margin-top: 70px;
+    }
+
+    .jl-portifolio-list .jl-portifolio-item:nth-child(odd) .jl-portfolio-info button {
+        float: right;
+    }
+
+    .jl-portifolio-list .jl-portifolio-item:nth-child(odd) .jl-portfolio-info h1,
+    .jl-portifolio-list .jl-portifolio-item:nth-child(odd) .jl-portfolio-info p {
+        text-align: right;
+    }
+
+
+    .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portfolio-info h1,
+    .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portfolio-info p {
+        text-align: left;
+    }
+
+
+    .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portfolio-info button {
+        float: left;
+    }
+
+
+    .jl-portifolio-list .jl-portifolio-item:nth-child(even) .jl-portfolio-info {
+        margin-left: 105px;
+    }
 }
 
 @media screen and (min-width:1200px) {
