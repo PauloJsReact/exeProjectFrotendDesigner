@@ -706,14 +706,23 @@ label {
 
     /* Sobre */
 
-    #jl-avatar-sobre img {
+    .jl-section-sobre {
+        height: calc(100% - 130px);
+    }
+
+    .jl-section-sobre .container-fluid,
+    .jl-section-sobre .container-fluid>.row {
+        height: 100%;
+    }
+
+    .jl-avatar-sobre {
         position: relative;
-        left: -15px;
     }
 
     .jl-box-img {
-        width: 100%;
-        display: table;
+        position: absolute;
+        left: -15px;
+        bottom: 0;
     }
 
     .jl-img-responsive {
@@ -721,6 +730,15 @@ label {
         max-width: 100%;
         height: auto;
         display: block;
+    }
+
+    .jl-titulo-sobre,
+    .jl-info-sobre,
+    .jl-premios-sobre {
+        width: 100%;
+        display: table;
+        float: left;
+        margin-bottom: 30px;
     }
 
     /*---------Detalhes----------*/
@@ -912,6 +930,11 @@ label {
         text-align: center;
     }
 
+    .jl-titulo-sobre h1 {
+        font-size: 90px;
+    }
+
+
 }
 
 @media screen and (min-width:360px) {
@@ -948,6 +971,7 @@ label {
     .jl-text-center-mob {
         text-align: left;
     }
+
 }
 
 @media screen and (min-width:992px) {
@@ -1109,6 +1133,23 @@ label {
         top: 17px;
     }
 
+    .jl-titulo-sobre {
+        width: 100%;
+    }
+
+    .jl-titulo-sobre h1 {
+        font-size: 90px;
+    }
+
+    .jl-info-sobre {
+        width: 55%;
+    }
+
+    .jl-premios-sobre {
+        width: 45%;
+        padding-left: 30px;
+    }
+
 
     /*---------UTLITARIAS ------------*/
 
@@ -1253,10 +1294,20 @@ label {
     }
 
 
-
 }
 
 @media screen and (min-width:1364px) {}
+
+@media screen and (min-width:1500px) {
+    .jl-info-sobre {
+        width: 35%;
+    }
+
+    .jl-premios-sobre {
+        width: 31%;
+    }
+
+}
 
 @media screen and (min-width:1600px) {
     .jl-gallery-frame-container {
