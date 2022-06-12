@@ -836,7 +836,7 @@ label {
 
 
     .jl-gallery-frame-container {
-        width: 400px;
+        width: 70%;
         display: none;
         position: fixed;
         top: 30px;
@@ -848,7 +848,7 @@ label {
 
     .jl-gallery-frame-container .jl-items-next-prev {
         width: 150px;
-        margin: 75px auto 0 auto;
+        margin: 45px auto 0 auto;
 
     }
 
@@ -868,10 +868,10 @@ label {
         height: 87%;
         margin: 0 auto;
         display: block;
-        border-radius: 30px;
+        border-radius: 22px;
         z-index: 1200;
         position: relative;
-        top: 20px;
+        top: 14px;
     }
 
     .jl-close-gallery {
@@ -912,6 +912,13 @@ label {
         text-align: center;
     }
 
+}
+
+@media screen and (min-width:360px) {
+
+    .jl-gallery-frame-container {
+        width: 60%;
+    }
 }
 
 @media screen and (min-width :576px) {
@@ -1093,6 +1100,16 @@ label {
         margin-bottom: 0;
     }
 
+    .jl-gallery-frame-container {
+        width: 320px;
+    }
+
+
+    .jl-gallery-frame-image {
+        top: 17px;
+    }
+
+
     /*---------UTLITARIAS ------------*/
 
     .jl-full-height {
@@ -1205,6 +1222,10 @@ label {
         margin-right: 75px;
     }
 
+    .jl-gallery-frame-container {
+        width: 340;
+    }
+
     .jl-navigator-counter span {
         font-size: 120px;
     }
@@ -1237,7 +1258,11 @@ label {
 
 @media screen and (min-width:1364px) {}
 
-@media screen and (min-width:1600px) {}
+@media screen and (min-width:1600px) {
+    .jl-gallery-frame-container {
+        width: 400px;
+    }
+}
 
 /*BOTÕES*/
 .jl-btn {
