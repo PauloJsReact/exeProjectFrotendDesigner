@@ -13,6 +13,9 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <title>Jom Lemon UX/UI Designer</title>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+
 </head>
 
 <body>
@@ -320,13 +323,26 @@
             </div>
         </section>
     </div>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/noframework.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js"></script>
-
     <script src="js/anime.min.js"></script>
     <script src="js/slaider.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        // Anmando elementos on Scroll com Waypoits
+
+        var myScrollDown = document.querySelector(".jl-scroll-down")
+        var waypoint = new Waypoint({
+            element: myScrollDown,
+            handler: function (direction) {
+                myScrollDown.classList.toggle("jl-fade-out")
+            },
+            offset: "80%"
+        })
+
+
+    </script>
 </body>
 
 </html>

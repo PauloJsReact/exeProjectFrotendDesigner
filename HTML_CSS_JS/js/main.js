@@ -26,7 +26,7 @@ btnContact.addEventListener("click", function () {
 //Abrindo e fechando o Menu Moobile
 
 for (let m = 0; m < toggleMenu.length; m++) {
-    toggleMenu[m].addEventListener("click",function () {
+    toggleMenu[m].addEventListener("click", function () {
         var overlayMenu = document.querySelector(".jl-menu-overlay");
         overlayMenu.classList.toggle("jl-is-open")
         menuMobile.classList.toggle("jl-menu-is-closed");
@@ -34,9 +34,9 @@ for (let m = 0; m < toggleMenu.length; m++) {
 
         var icon = btnIconMobileMenu.getAttribute("name");
         if (icon === "menu") {
-            btnIconMobileMenu.setAttribute("name","close");
-        }else{
-            btnIconMobileMenu.setAttribute("name","menu");
+            btnIconMobileMenu.setAttribute("name", "close");
+        } else {
+            btnIconMobileMenu.setAttribute("name", "menu");
         }
     })
 }
@@ -54,15 +54,4 @@ for (let i = 0; i < toggleModal.length; i++) {
     })
 
 }
-
-// Anmando elementos on Scroll com Waypoits
-
-var myScrollDown = document.querySelector(".jl-scroll-down")
-var waypoint = new Waypoint({
-    element: myScrollDown,
-    handler: function (direction) {
-        myScrollDown.classList.toggle("jl-fade-out")
-    },
-    offset: "80%"
-})
 
