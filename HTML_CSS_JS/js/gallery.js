@@ -1,7 +1,7 @@
 var overlay = document.querySelector(".jl-overlay");
 var frameImage = document.querySelector(".jl-gallery-frame-image");
 var frameContainer = document.querySelector(".jl-gallery-frame-container");
-var galleryImages = document.querySelectorAll(".jl-thumb-img");
+var galleryImages = document.querySelectorAll(".jl-thumb-box");
 var closeGallery = document.querySelectorAll(".jl-toggle-gallery");
 var btnNext = document.querySelector(".jl-item-next");
 var btnPrev = document.querySelector(".jl-item-prev");
@@ -44,8 +44,8 @@ const skeletonAnim = function (imagem) {
 const getImageSrc = function () {
     for (let i = 0; i < galleryImages.length; i++) {
         galleryImages[i].addEventListener("click", function (con) {
-            var imageSrc = this.getAttribute("data-src");
-            var itemNum = this.getAttribute("data-item");
+            var imageSrc = this.querySelector("img").getAttribute("data-src");
+            var itemNum = this.querySelector("img").getAttribute("data-item");
 
             skeletonLoading.style.display = "flex";
 
@@ -80,7 +80,7 @@ const nextItem = function () {
     var nextIntemNum = currItem + 1;
 
     for (let n = 0; n < galleryImages.length; n++) {
-        var item = galleryImages[n];
+        var item = galleryImages[n].querySelector("img");
 
         var itemNum = parseInt(item.getAttribute("data-item"));
 
@@ -107,7 +107,7 @@ const prevItem = function () {
 
 
     for (let p = 0; p < galleryImages.length; p++) {
-        var itemNumP = galleryImages[p];
+        var itemNumP = galleryImages[p].querySelector("img");
         var itemNumPrev = parseInt(itemNumP.getAttribute("data-item"));
 
         if (prevItemNum === itemNumPrev) {
